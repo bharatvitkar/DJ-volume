@@ -41,6 +41,14 @@ function modelLoaded()
 function draw()
 {
     image(video,0,0,600,500);
+   fill("#e61405");
+   stroke("#e61405");
+   circle(leftwristx,leftwristy,20);
+   leftwristynumber=Number(leftwristy);
+   removedecimal=floor(leftwristynumber);
+   volume=removedecimal/500;
+   document.getElementById("volume").innerHTML="volume = "+volume;
+   song.setVolume(volume);
 }
 
 function play()
